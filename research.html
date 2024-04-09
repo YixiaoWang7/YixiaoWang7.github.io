@@ -73,9 +73,8 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Yixiao Wang</h1>
-        <p>Mechanical Engineering<br><i>Northwestern University</i><br><i>Shanghai Jiao Tong University</i></p>
-        <p>Research Institute<br><a href="http://ampl.mech.northwestern.edu/"><i>Advanced Manufacturing Processes Laboratory (AMPL)</i></a><br><i>Robotics Institute</i></p>
+        <p>Major: Mechanical Engineering<br><i>PhD: University of California, Berkeley</i><br><i>Master: Northwestern University</i><br><i>Master: Shanghai Jiao Tong University</i><br><i>Bachelor: Shanghai Jiao Tong University</i></p>
+        <p>Research Institute<br><a href="https://msc.berkeley.edu"><i>Current: Mechanical Systems Control Lab (UCB)</i><br><a href="http://ampl.mech.northwestern.edu/"><i>Previous: Advanced Manufacturing Processes Laboratory (NU)</i></a><br><i>Previous: Robotics Institute (SJTU)</i></p>
     <h3><a href="https://YixiaoWang7.github.io/">Home</a></h3>
         <h3><a href="https://YixiaoWang7.github.io/research.html">Research</a></h3>
     <h3><a href="https://YixiaoWang7.github.io/research/CV.pdf">CV</a></h3>  
@@ -83,7 +82,7 @@
         <h3><a href="https://YixiaoWang7.github.io/personal.html">Personal</a></h3>
     <b>Social</b><br>
         <div class="social-row">
-          <a href="mailto:edwardyixiao@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
+          <a href="mailto:yixiao_wang@berkeley.edu" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a><br>
           <a href="http://github.com/YixiaoWang7"><i class="fa fa-fw fa-github-square"></i> GitHub</a><br>
           <br>
         </div>
@@ -96,10 +95,80 @@
 
     <h2><a id="Research" class="anchor" href="#research" aria-hidden="true"><span class="octicon octicon-link"></span></a>Research Projects</h2>
     
+
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" >Optimizing Diffusion Model for Controllable Joint Trajectory Prediction</a> 
+      <br> Submitted to ECCV 2024 
+      <br>Aug. 2023~ Feb. 2024
+      <br><i>University of California, Berkeley</i> 
+    <br><button class="accordion"> 
+    Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p> Diffusion models are promising for joint trajectory prediction and controllable generation in 
+        autonomous driving, but they face challenges of inefficient inference time and high computational 
+        demands. To tackle these challenges, we introduce Optimal Gaussian Diffusion (OGD) and Estimated 
+        Clean Manifold (ECM) Guidance. OGD optimizes the prior distribution for a small diffusion time 
+        and starts the reverse diffusion process from it. ECM directly injects guidance gradients to 
+        the estimated clean manifold, eliminating extensive gradient backpropagation throughout the network. 
+        Our methodology streamlines the generative process, enabling practical applications with reduced 
+        computational overhead. Experimental validation on the large-scale Argoverse 2 dataset demonstrates 
+        our approach's superior performance, offering a viable solution for computationally efficient, 
+        high-quality joint trajectory generation and controllable generation for autonomous driving.  
+      </p>
+    </div>
+    <p style="margin:0"><button class="accordion">
+      Achievements
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p>  
+        <br> To be announced
+      </p>
+    </div>
+    <br>
+
+
+
+    <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" >Joint Pedestrian Trajectory Prediction through Posterior Sampling</a> 
+      <br> Submitted to IROS 2024 
+      <br>Oct. 2023~ Feb. 2024
+      <br><i>University of California, Berkeley</i> 
+    <br><button class="accordion"> 
+    Abstract   
+    </button>   
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p> Joint pedestrian trajectory prediction has long grappled with the inherent unpredictability of human 
+        behaviors. Recent investigations employing variants of conditional diffusion models in trajectory 
+        prediction have exhibited notable success. Nevertheless, the heavy dependence on accurate historical 
+        data results in their vulnerability to noise disturbances and data incompleteness. To improve the 
+        robustness and reliability, we introduce the Guided Full Trajectory Diffuser (GFTD), a novel diffusion 
+        model framework that captures the joint full (historical and future) trajectory distribution. By 
+        learning from the full trajectory, GFTD can recover the noisy and missing data, hence improving the 
+        robustness. In addition, GFTD can adapt to data imperfections without additional training requirements, 
+        leveraging posterior sampling for reliable prediction and controllable generation. Our approach not only 
+        simplifies the prediction process but also enhances generalizability in scenarios with noise and 
+        incomplete inputs. Through rigorous experimental evaluation, GFTD exhibits superior performance in 
+        both trajectory prediction and controllable generation. See these results at 
+        https://sites.google.com/andrew.cmu.edu/posterior-sampling-prediction.  
+      </p>
+    </div>
+    <p style="margin:0"><button class="accordion">
+      Achievements
+    </button>
+    <div class="panel" style="background-color: #F1F1F1; color: #666; padding: 10px;">
+      <p>  
+        <br> To be announced
+      </p>
+    </div>
+    <br>
+
+
+
+
     <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/YixiaoWang7/AutoPilot">Planning and Control in Autopilot</a> 
       <br> Out of interest 
       <br>July. 2021~
-      <br><i>Autonomous Driving Product Department in a company</i> 
+      <br><i>Autonomous Driving Product Department</i> 
     <br><button class="accordion"> 
     Abstract   
     </button>   
@@ -151,6 +220,10 @@
     </div>
     <br>
     
+
+
+
+
     <p style="margin:0"> <a style="margin:0; font-size:100%; font-weight:bold" href="https://github.com/YixiaoWang7/Toolpath_Planning_of_Grinding">Path Planning for Force-controlled Robotic Grinding of Hub Surfaces</a> 
       <br> Master Thesis 
       <br>Oct. 2020~Dec. 2020
