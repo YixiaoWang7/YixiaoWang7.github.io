@@ -1,3 +1,1 @@
-# yixiaowang7.github.io
-Repository for Yixiao Wang's academic research website.
-Thanks to Tyler Ransom for the template.
+This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
