@@ -46,6 +46,8 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
+                <li><strong>April, 2025:</strong> One paper got selected as a <span style="color: red;">Best Paper Award Finalist</span> at ICRA 2025! Congratulations to Tianqi! </li>
+                <li><strong>February, 2025:</strong> One paper got accepted by CVPR 2025!</li>
                 <li><strong>November, 2024:</strong> Two paper were submitted to CVPR 2025!</li>
                 <li><strong>September, 2024:</strong> Two paper were submitted to ICRA 2025!</li>
                 <li><strong>September, 2024:</strong> One paper got accepted by CoRL 2024!</li>
@@ -66,7 +68,7 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research</h2>
                 <p>
-                  I am interested in robotics, generative AI (specifically diffusion models), reasoning, and planning. I am continuously pursuing the study of world models from the perspective of data distribution, focusing on how interactions can be learned and ensured under physical and social rules. I'm always open to collaborating and discussing on exciting research projects. Feel free to reach out!               </p>
+                  I am passionate about robotics, generative AI (with a focus on diffusion models), reasoning, and planning. My research is centered on advancing generalization capabilities in robot learning, with an emphasis on scaling through improvements in data, algorithms, and system design. I am always open to collaboration and discussions on exciting research projects. Please feel free to reach out!             </p>
                 <!-- <p>
                   I am looking for summer 2025 interns! Please reach out if there are any positions available!
                 </p> -->
@@ -77,41 +79,44 @@
     
 
     
-
-    <tr onmouseout="ipg_stop()" onmouseover="ipg_start()">
+    <tr onmouseout="sdp_stop()" onmouseover="sdp_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='ipg_image'><video width=100% muted autoplay loop>
-          <source src="images/ipg_2.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/ipg_2.png' width=100%>
+          <img src='images/generalization_gap.png' width=100%>
         </div>
-        <script type="text/javascript">
-          function ipg_start() {
-            document.getElementById('ipg_image').style.opacity = "1";
-          }
-
-          function ipg_stop() {
-            document.getElementById('ipg_image').style.opacity = "0";
-          }
-          ipg_stop()
-        </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://sites.google.com/view/simulate-learn-interact">
-          <span class="papertitle">Imagined Potential Games: A Framework for Simulating, Learning and Evaluating Interactive Behaviors</span>
+        <a href="https://arxiv.org/pdf/2504.18538">
+          <span class="papertitle">Generalization Capability for Imitation Learning</span>
         </a>
         <br>
-        Lingfeng Sun, <strong>Yixiao Wang</strong>, Pin-Yun Hung, Changhao Wang, Xiang Zhang, Zhuo Xu, Masayoshi Tomizuka
+        <strong>Yixiao Wang</strong>
         <br>
-        <em>Under Review</em>, 2024
+        <em>In Progress</em>, 2025
         <br>
-        <a href="https://sites.google.com/view/simulate-learn-interact">project page</a>
-        /
-        <a href="https://arxiv.org/pdf/2411.03669v1">arXiv</a>
+        <a href="https://arxiv.org/pdf/2504.18538">arXiv</a>
       </td>
     </tr>
+
+    <tr onmouseout="sdp_stop()" onmouseover="sdp_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/structure_ver.pdf' width=100%>
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <!-- <a href="https://arxiv.org/pdf/2504.18538"> -->
+          <span class="papertitle">VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</span>
+        </a>
+        <br>
+        <strong>Yixiao Wang</strong>
+        <br>
+        <em>Under Review</em>, 2025
+        <!-- <br>
+        <a href="https://arxiv.org/pdf/2504.18538">arXiv</a> -->
+      </td>
+    </tr>
+
           
 
 
@@ -152,6 +157,9 @@
       </td>
     </tr>
 
+
+
+
     <tr onmouseout="otd_stop()" onmouseover="otd_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
@@ -186,7 +194,7 @@
         <br>
         Zhixuan Liang, Yao Mu, <strong>Yixiao Wang</strong>, Tianxing Chen, Wenqi Shao, Wei Zhan, Masayoshi Tomizuka, Ping Luo, Mingyu Ding
         <br>
-        <em>Under Review</em>, 2024
+        <em>CVPR</em>, 2025
         <br>
         <a href="https://dexdiffuser.github.io">project page</a>
         /
@@ -207,11 +215,31 @@
         <br>
         Chensheng Peng<sup>*</sup>, Chengwei Zhang<sup>*</sup>, <strong>Yixiao Wang</strong>, Chenfeng Xu, Yichen Xie, Wenzhao Zheng, Kurt Keutzer, Masayoshi Tomizuka, Wei Zhan
         <br>
-        <em>Under Review</em>, 2024
+        <em>CVPR</em>, 2025
         <br>
         <a href="https://github.com/chengweialan/DeSiRe-GS">github</a>
         /
         <a href="https://arxiv.org/pdf/2411.11921">arXiv</a>
+      </td>
+    </tr>
+
+
+    <tr onmouseout="olm_stop()" onmouseover="olm_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/olm.png' width=100%>
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://thomaschen98.github.io/data/icra25_tianqi.pdf">
+          <span class="papertitle">Physics-Aware Robotic Palletization with Online Masking Inference</span>
+        </a>
+        <br>
+        Tianqi Zhang, Zheng Wu, Yuxin Chen, <strong>Yixiao Wang</strong>, Boyuan Liang, Scott Moura, Masayoshi Tomizuka, Mingyu Ding, Wei Zhan
+        <br>
+        <em>ICRA</em>, 2025 (<span style="color: red;">Best Paper Award Finalist</span>)
+        <br>
+        <a href="https://arxiv.org/pdf/2502.13443">Paper</a>
       </td>
     </tr>
 
@@ -236,22 +264,41 @@
     </tr>
     
 
-    <tr onmouseout="olm_stop()" onmouseover="olm_start()">
+
+
+
+    <tr onmouseout="ipg_stop()" onmouseover="ipg_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <img src='images/olm.png' width=100%>
+          <div class="two" id='ipg_image'><video width=100% muted autoplay loop>
+          <source src="images/ipg_2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/ipg_2.png' width=100%>
         </div>
+        <script type="text/javascript">
+          function ipg_start() {
+            document.getElementById('ipg_image').style.opacity = "1";
+          }
+
+          function ipg_stop() {
+            document.getElementById('ipg_image').style.opacity = "0";
+          }
+          ipg_stop()
+        </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://thomaschen98.github.io/data/icra25_tianqi.pdf">
-          <span class="papertitle">Physics-Aware Robotic Palletization with Online Masking Inference</span>
+        <a href="https://sites.google.com/view/simulate-learn-interact">
+          <span class="papertitle">Imagined Potential Games: A Framework for Simulating, Learning and Evaluating Interactive Behaviors</span>
         </a>
         <br>
-        Tianqi Zhang, Zheng Wu, Yuxin Chen, <strong>Yixiao Wang</strong>, Boyuan Liang, Scott Moura, Masayoshi Tomizuka, Mingyu Ding, Wei Zhan
+        Lingfeng Sun, <strong>Yixiao Wang</strong>, Pin-Yun Hung, Changhao Wang, Xiang Zhang, Zhuo Xu, Masayoshi Tomizuka
         <br>
-        <em>Under Review</em>, 2024
+        <em>Under Review</em>, 2025
         <br>
-        <a href="https://thomaschen98.github.io/data/icra25_tianqi.pdf">Paper</a>
+        <a href="https://sites.google.com/view/simulate-learn-interact">project page</a>
+        /
+        <a href="https://arxiv.org/pdf/2411.03669v1">arXiv</a>
       </td>
     </tr>
     
