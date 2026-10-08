@@ -34,7 +34,7 @@
           <p class="eyebrow">Robot learning &amp; machine learning</p>
           <h1 id="name">Yixiao Wang</h1>
           <p class="research-statement">How do robots learn<br>to <em>generalize?</em></p>
-          <p class="bio">I'm a fourth-year PhD candidate at UC Berkeley, honored to be advised by Professor <a href="https://scholar.google.com/citations?user=8m8taGEAAAAJ&amp;hl=en&amp;oi=ao">Masayoshi Tomizuka</a> and affiliated with <a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research (BAIR)</a>.</p>
+          <p class="bio">I'm a PhD candidate in Mechanical Engineering at UC Berkeley, advised by Professor <a href="https://scholar.google.com/citations?user=8m8taGEAAAAJ&amp;hl=en&amp;oi=ao">Masayoshi Tomizuka</a> and affiliated with <a href="https://bair.berkeley.edu/">Berkeley Artificial Intelligence Research (BAIR)</a>. I expect to graduate in May 2027.</p>
           <div class="profile-links" aria-label="Contact and profiles">
             <a href="mailto:yixiao_wang@berkeley.edu">Email <span aria-hidden="true">↗</span></a>
             <a href="https://scholar.google.com/citations?hl=en&amp;user=nUIFbw8AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a>
@@ -51,14 +51,16 @@
       <section id="news" class="section news" aria-labelledby="news-heading">
         <h2 id="news-heading">Recent updates</h2>
         <ul class="news-list">
-          <li><time datetime="2026-01">Jan 2026</time><p><span class="news-tag">New</span> Two papers were submitted to <strong>ICML 2026</strong>. <a href="https://arxiv.org/abs/2602.04037">DADP</a> (<a href="https://arxiv.org/abs/2602.04037">arXiv</a>); another one arXiv coming soon!</p></li>
-          <li><time datetime="2026-01">Jan 2026</time><p><span class="news-tag">Newly accepted</span> Three papers got accepted by <strong>ICLR 2026</strong>. Check out two of them: <a href="https://gever2025.github.io/">VER project</a> / <a href="https://openreview.net/pdf?id=aoorNQFpM6">PDF</a>; <a href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/">Interleave-VLA project</a> / <a href="https://openreview.net/pdf?id=ULTWUuGhC3">PDF</a>.</p></li>
-          <li><time datetime="2025-05">May 2025</time><p>One paper got selected as a <strong class="award">Best Paper Award in Automation</strong> at ICRA 2025! Congratulations to Tianqi!</p></li>
+          <li><time datetime="2026">2026</time><p>Our work on <a href="#compositional-generalization">compositional generalization in sequential robot tasks</a> is a <strong class="award">CoRL 2026 Spotlight</strong>.</p></li>
+          <li><time datetime="2026">2026</time><p><a href="#dadp">DADP</a> is accepted at <strong>ICML 2026</strong>. I also received the <strong class="award">ICML Gold Reviewer</strong> recognition.</p></li>
+          <li><time datetime="2026">2026</time><p>Three papers at <strong>ICLR 2026</strong>: <a href="#ver">VER</a>, <a href="#interleave-vla">Interleave-VLA</a>, and <a href="#mean-flow">Mean Flow Policy</a> (<strong class="award">Oral</strong>).</p></li>
         </ul>
         <details class="older-news">
           <summary>Earlier updates</summary>
           <ul class="news-list">
-            <li><time datetime="2025-05">May 2025</time><p>I started my internship at Nvidia, working on loco manipulation!</p></li>
+            <li><time datetime="2026-05">May 2026</time><p>I joined Amazon as an Applied Scientist Intern, studying reusable action priors for data-efficient vision-language-action models.</p></li>
+            <li><time datetime="2025-05">May 2025</time><p>Our <a href="#palletization">robotic palletization paper</a> received the <strong class="award">Best Paper Award in Automation</strong> at ICRA 2025. Congratulations to Tianqi!</p></li>
+            <li><time datetime="2025-05">May 2025</time><p>I joined NVIDIA as an Isaac Loco-Manipulation Intern.</p></li>
             <li><time datetime="2025-02">Feb 2025</time><p>Two papers got accepted by CVPR 2025!</p></li>
             <li><time datetime="2024-09">Sep 2024</time><p>One paper got accepted by CoRL 2024!</p></li>
             <li><time datetime="2024-07">Jul 2024</time><p>One paper got accepted by ECCV 2024!</p></li>
@@ -70,13 +72,13 @@
       <section id="research" class="section research" aria-labelledby="research-heading">
         <p class="eyebrow"><span class="section-number">01</span> Research perspective</p>
         <h2 id="research-heading">Questions that guide my work</h2>
-        <p class="section-intro">I am passionate about robotics, generative AI (with a focus on diffusion models), reasoning, and planning. My research is centered on advancing generalization capabilities in robot learning, with an emphasis on scaling through improvements in data, algorithms, and system design.</p>
+        <p class="section-intro">I study the foundations of efficient and generalizable robot learning: how data composition, learned representations, and model architectures shape what a policy can learn and transfer. My work spans compositional generalization, data-centric policy learning, and the theory and acceleration of generative models.</p>
         <div class="research-questions">
           <article>
             <span class="question-number" aria-hidden="true">i.</span>
             <h3>What makes learning generalize?</h3>
             <p>Understanding how the information in demonstrations and learned representations affects behavior beyond the training distribution.</p>
-            <a href="#generalization">Generalization &amp; learning <span aria-hidden="true">↗</span></a>
+            <a href="#compositional-generalization">Generalization &amp; learning <span aria-hidden="true">↗</span></a>
           </article>
           <article>
             <span class="question-number" aria-hidden="true">ii.</span>
@@ -103,15 +105,15 @@
         </div>
         <p class="section-intro">Three threads connecting fundamental questions to learning in the physical world.</p>
 
-        <article id="generalization" class="paper featured-paper">
-          <a class="paper-figure" href="https://arxiv.org/abs/2504.18538" aria-label="Read Generalization Capability for Imitation Learning">
-            <img src="images/generalization_gap.png" width="602" height="450" alt="Illustration of samples from a training distribution and the generalization gap" loading="lazy">
+        <article id="compositional-generalization" class="paper featured-paper">
+          <a class="paper-figure" href="https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/" aria-label="Explore Diagnosing Compositional Generalization in Sequential Robot Tasks">
+            <img src="images/compositional_generalization.png" width="1500" height="619" alt="Sequential pick-and-place task in which a later instruction constrains an earlier placement" loading="lazy">
           </a>
           <div class="paper-copy">
-            <div class="paper-meta"><span class="paper-topic">Generalization</span><span>In Progress · 2025</span></div>
-            <h3><a href="https://arxiv.org/abs/2504.18538">Generalization Capability for Imitation Learning</a></h3>
-            <p class="authors"><strong>Yixiao Wang</strong></p>
-            <div class="paper-links"><a href="https://arxiv.org/abs/2504.18538">Paper <span aria-hidden="true">↗</span></a></div>
+            <div class="paper-meta"><span class="paper-topic">Generalization</span><span>CoRL · 2026 · <strong class="award">Spotlight</strong></span></div>
+            <h3><a href="https://arxiv.org/abs/2607.29687">Diagnosing Compositional Generalization in Sequential Robot Tasks</a></h3>
+            <p class="authors"><strong>Yixiao Wang</strong>, Cheng-En Wu, Lingfeng Sun, Pengcheng Wang, Xiang Ji, Boyuan Liang, Guojian Zhan, Masayoshi Tomizuka</p>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2607.29687">Paper <span aria-hidden="true">↗</span></a><a href="https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/">Project <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -120,10 +122,10 @@
             <img src="images/structure_ver.png" width="1200" height="653" alt="VER distills vision foundation models into an expert library and routes their representations for robot tasks" loading="lazy">
           </a>
           <div class="paper-copy">
-            <div class="paper-meta"><span class="paper-topic">Representation</span><span>ICLR · 2026 · Newly accepted</span></div>
-            <h3><a href="https://openreview.net/forum?id=aoorNQFpM6">VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</a></h3>
+            <div class="paper-meta"><span class="paper-topic">Representation</span><span>ICLR · 2026</span></div>
+            <h3><a href="https://arxiv.org/abs/2510.05213">VER: Vision Expert Transformer for Robot Learning via Foundation Distillation and Dynamic Routing</a></h3>
             <p class="authors"><strong>Yixiao Wang</strong>, Mingxiao Huo, Zhixuan Liang, Yushi Du, Lingfeng Sun, Haotian Lin, Jinghuan Shang, Chensheng Peng, Mohit Bansal, Mingyu Ding, Masayoshi Tomizuka</p>
-            <div class="paper-links"><a href="https://openreview.net/pdf?id=aoorNQFpM6">Paper <span aria-hidden="true">↗</span></a><a href="https://gever2025.github.io/">Project <span aria-hidden="true">↗</span></a></div>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2510.05213">Paper <span aria-hidden="true">↗</span></a><a href="https://yixiaowang7.github.io/ver_page/">Project <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
 
@@ -140,18 +142,51 @@
         </article>
 
         <div class="more-publications">
-          <h3 class="subsection-title">More publications</h3>
+          <h3 class="subsection-title">More conference papers</h3>
           <p class="publication-note">* Equal contribution. † Corresponding author.</p>
           <div class="publication-list">
-            <article class="publication">
-              <p class="publication-venue">2026<span>ICLR</span><span>Newly accepted</span></p>
+            <article id="dadp" class="publication">
+              <p class="publication-venue">2026<span>ICML</span></p>
               <div>
-                <h4><a href="https://openreview.net/forum?id=ULTWUuGhC3">Interleave-vla: Enhancing robot manipulation with interleaved image-text instructions</a></h4>
-                <p class="authors">Cunxin Fan, Xiaosong Jia, Yihang Sun, <strong>Yixiao Wang</strong>, Jianglan Wei, Ziyang Gong, Xiangyu Zhao, Masayoshi Tomizuka, Xue Yang, Junchi Yan, Mingyu Ding</p>
-                <div class="paper-links"><a href="https://openreview.net/pdf?id=ULTWUuGhC3">Paper <span aria-hidden="true">↗</span></a><a href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/">Project <span aria-hidden="true">↗</span></a></div>
+                <h4><a href="https://arxiv.org/abs/2602.04037">DADP: Domain Adaptive Diffusion Policy</a></h4>
+                <p class="authors">Pengcheng Wang*, Qinghang Liu*, Haotian Lin, Yiheng Li, Guojian Zhan, Masayoshi Tomizuka, <strong>Yixiao Wang</strong></p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2602.04037">Paper <span aria-hidden="true">↗</span></a><a href="https://outsider86.github.io/DomainAdaptiveDiffusionPolicy/">Project <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
-            <article class="publication">
+            <article id="interleave-vla" class="publication">
+              <p class="publication-venue">2026<span>ICLR</span></p>
+              <div>
+                <h4><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/444876e32cba0408c63f5295481cfe20-Abstract-Conference.html">Interleave-VLA: Enhancing Robot Manipulation with Image-Text Interleaved Instructions</a></h4>
+                <p class="authors">Cunxin Fan*, Xiaosong Jia*, Yihang Sun, <strong>Yixiao Wang</strong>, Jianglan Wei, Ziyang Gong, Xiangyu Zhao, Masayoshi Tomizuka, Xue Yang, Junchi Yan, Mingyu Ding</p>
+                <div class="paper-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/444876e32cba0408c63f5295481cfe20-Abstract-Conference.html">Paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2505.02152">arXiv <span aria-hidden="true">↗</span></a><a href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/">Project <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="mean-flow" class="publication">
+              <p class="publication-venue">2026<span>ICLR</span></p>
+              <div>
+                <h4><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/fe7f375ef01e43f17d2c32b28a176577-Abstract-Conference.html">Mean Flow Policy with Instantaneous Velocity Constraint for One-step Action Generation</a></h4>
+                <p class="authors">Guojian Zhan*, Letian Tao*, Pengcheng Wang, <strong>Yixiao Wang</strong>, Yuxin Chen, Yiheng Li, Hongyang Li, Masayoshi Tomizuka, Shengbo Li</p>
+                <p class="award">Oral presentation</p>
+                <div class="paper-links"><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/fe7f375ef01e43f17d2c32b28a176577-Abstract-Conference.html">Paper <span aria-hidden="true">↗</span></a><a href="https://arxiv.org/abs/2602.13810">arXiv <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="dexhanddiff" class="publication">
+              <p class="publication-venue">2025<span>CVPR</span></p>
+              <div>
+                <h4><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Liang_DexHandDiff_Interaction-aware_Diffusion_Planning_for_Adaptive_Dexterous_Manipulation_CVPR_2025_paper.html">DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation</a></h4>
+                <p class="authors">Zhixuan Liang, Yao Mu, <strong>Yixiao Wang</strong>, Tianxing Chen, Wenqi Shao, Wei Zhan, Masayoshi Tomizuka, Ping Luo, Mingyu Ding</p>
+                <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Liang_DexHandDiff_Interaction-aware_Diffusion_Planning_for_Adaptive_Dexterous_Manipulation_CVPR_2025_paper.html">Paper <span aria-hidden="true">↗</span></a><a href="https://dexdiffuser.github.io/">Project <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="desire-gs" class="publication">
+              <p class="publication-venue">2025<span>CVPR</span></p>
+              <div>
+                <h4><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Peng_DeSiRe-GS_4D_Street_Gaussians_for_Static-Dynamic_Decomposition_and_Surface_Reconstruction_CVPR_2025_paper.html">DeSiRe-GS: 4D Street Gaussians for Static-Dynamic Decomposition and Surface Reconstruction for Urban Driving Scenes</a></h4>
+                <p class="authors">Chensheng Peng*, Chengwei Zhang*, <strong>Yixiao Wang</strong>, Chenfeng Xu, Yichen Xie, Wenzhao Zheng, Kurt Keutzer, Masayoshi Tomizuka, Wei Zhan</p>
+                <div class="paper-links"><a href="https://openaccess.thecvf.com/content/CVPR2025/html/Peng_DeSiRe-GS_4D_Street_Gaussians_for_Static-Dynamic_Decomposition_and_Surface_Reconstruction_CVPR_2025_paper.html">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/chengweialan/DeSiRe-GS">Code <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="palletization" class="publication">
               <p class="publication-venue">2025<span>ICRA</span></p>
               <div>
                 <h4><a href="https://arxiv.org/abs/2502.13443">Physics-Aware Robotic Palletization with Online Masking Inference</a></h4>
@@ -160,39 +195,23 @@
                 <div class="paper-links"><a href="https://arxiv.org/abs/2502.13443">Paper <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
-            <article class="publication">
-              <p class="publication-venue">2025<span>CVPR</span></p>
+            <article id="efficient-locomotion" class="publication">
+              <p class="publication-venue">2025<span>ICRA</span></p>
               <div>
-                <h4><a href="https://dexdiffuser.github.io/">DexDiffuser: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation</a></h4>
-                <p class="authors">Zhixuan Liang, Yao Mu, <strong>Yixiao Wang</strong>, Tianxing Chen, Wenqi Shao, Wei Zhan, Masayoshi Tomizuka, Ping Luo, Mingyu Ding</p>
-                <div class="paper-links"><a href="https://dexdiffuser.github.io/public/CVPR25_DexDiffuser.pdf">Paper <span aria-hidden="true">↗</span></a><a href="https://dexdiffuser.github.io/">Project <span aria-hidden="true">↗</span></a></div>
+                <h4><a href="https://hybrid-robotics.berkeley.edu/publications/ICRA2025_Energy_Efficient_Quadruped_Locomotion.pdf">Adaptive Energy Regularization for Autonomous Gait Transition and Energy-Efficient Quadruped Locomotion</a></h4>
+                <p class="authors">Boyuan Liang*, Lingfeng Sun*, Xinghao Zhu*, Bike Zhang, Ziyin Xiong, <strong>Yixiao Wang</strong>, Chenran Li, Koushil Sreenath, Masayoshi Tomizuka</p>
+                <div class="paper-links"><a href="https://hybrid-robotics.berkeley.edu/publications/ICRA2025_Energy_Efficient_Quadruped_Locomotion.pdf">Paper <span aria-hidden="true">↗</span></a><a href="https://sites.google.com/berkeley.edu/efficient-locomotion">Project <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
-            <article class="publication">
-              <p class="publication-venue">2025<span>CVPR</span></p>
-              <div>
-                <h4><a href="https://arxiv.org/abs/2411.11921">DeSiRe-GS: 4D Street Gaussians for Static-Dynamic Decomposition and Surface Reconstruction for Urban Driving Scenes</a></h4>
-                <p class="authors">Chensheng Peng*, Chengwei Zhang*, <strong>Yixiao Wang</strong>, Chenfeng Xu, Yichen Xie, Wenzhao Zheng, Kurt Keutzer, Masayoshi Tomizuka, Wei Zhan</p>
-                <div class="paper-links"><a href="https://arxiv.org/abs/2411.11921">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/chengweialan/DeSiRe-GS">Code <span aria-hidden="true">↗</span></a></div>
-              </div>
-            </article>
-            <article class="publication">
-              <p class="publication-venue">2025<span>Under Review</span></p>
-              <div>
-                <h4><a href="https://arxiv.org/abs/2411.03669">Imagined Potential Games: A Framework for Simulating, Learning and Evaluating Interactive Behaviors</a></h4>
-                <p class="authors">Lingfeng Sun, <strong>Yixiao Wang</strong>, Pin-Yun Hung, Changhao Wang, Xiang Zhang, Zhuo Xu, Masayoshi Tomizuka</p>
-                <div class="paper-links"><a href="https://arxiv.org/abs/2411.03669">Paper <span aria-hidden="true">↗</span></a><a href="https://sites.google.com/view/simulate-learn-interact">Project <span aria-hidden="true">↗</span></a><a href="images/ipg_2.mp4">Demo <span aria-hidden="true">↗</span></a></div>
-              </div>
-            </article>
-            <article class="publication">
+            <article id="opttrajdiff" class="publication">
               <p class="publication-venue">2024<span>ECCV</span></p>
               <div>
-                <h4><a href="https://arxiv.org/abs/2408.00766">OptTrajDiff: Optimizing Diffusion Models for Joint Trajectory Prediction and Controllable Generation</a></h4>
+                <h4><a href="https://arxiv.org/abs/2408.00766">Optimizing Diffusion Models for Joint Trajectory Prediction and Controllable Generation</a></h4>
                 <p class="authors"><strong>Yixiao Wang</strong>, Chen Tang, Lingfeng Sun, Simone Rossi, Yichen Xie, Chensheng Peng, Thomas Hannagan, Stefano Sabatini, Nicola Poerio, Masayoshi Tomizuka, Wei Zhan</p>
                 <div class="paper-links"><a href="https://arxiv.org/abs/2408.00766">Paper <span aria-hidden="true">↗</span></a><a href="https://yixiaowang7.github.io/OptTrajDiff_Page/">Project <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
-            <article class="publication">
+            <article id="joint-trajectory" class="publication">
               <p class="publication-venue">2024<span>IROS</span></p>
               <div>
                 <h4><a href="https://arxiv.org/abs/2404.00237">Joint Pedestrian Trajectory Prediction through Posterior Sampling</a></h4>
@@ -200,8 +219,76 @@
                 <div class="paper-links"><a href="https://arxiv.org/abs/2404.00237">Paper <span aria-hidden="true">↗</span></a></div>
               </div>
             </article>
-            <article class="publication">
-              <p class="publication-venue">2024<span>arXiv</span></p>
+          </div>
+        </div>
+
+        <div class="more-publications">
+          <h3 class="subsection-title">Journal &amp; workshop papers</h3>
+          <div class="publication-list">
+            <article id="teleoperation" class="publication">
+              <p class="publication-venue">2026<span>IEEE/ASME T-Mech</span><span>Early access</span></p>
+              <div>
+                <h4><a href="https://doi.org/10.1109/TMECH.2026.3682948">Singularity-Avoidant Motion Mappings for Pose-Tracking Teleoperation With Operational Jacobian Analysis</a></h4>
+                <p class="authors">Jianshu Zhou*, Boyuan Liang*, Junda Huang, Hanyu Zhang, Ian Zhang, <strong>Yixiao Wang</strong>, Pieter Abbeel, Masayoshi Tomizuka</p>
+                <div class="paper-links"><a href="https://doi.org/10.1109/TMECH.2026.3682948">Paper <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="hydraulic-gripper" class="publication">
+              <p class="publication-venue">2026<span>ICRA Space Robotics Workshop</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2605.17851">A Dexterous and Compliant Gripper With Soft Hydraulic Actuation for Microgravity Manipulation</a></h4>
+                <p class="authors">William Su, Jordan Kam, <strong>Yixiao Wang</strong>, Jianshu Zhou</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2605.17851">Paper <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="more-publications">
+          <h3 class="subsection-title">Preprints</h3>
+          <div class="publication-list">
+            <article id="astrobee" class="publication">
+              <p class="publication-venue">2026<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2609.25614">A Deployable Four-Finger Payload for Teleoperated Free-Flying Manipulation with Astrobee</a></h4>
+                <p class="authors">William Su, Jordan Kam, Yunosuke Nakamura, <strong>Yixiao Wang</strong>, Jianshu Zhou, Masayoshi Tomizuka</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2609.25614">Paper <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="dual-opposition" class="publication">
+              <p class="publication-venue">2026<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2609.22871">A Reconfigurable Dual-Opposition Architecture for Single-Hand Assembly and Manipulation</a></h4>
+                <p class="authors">William Su, Yunosuke Nakamura, <strong>Yixiao Wang</strong>, Yitong Li, Mingrui Yu, Huanan Qi, Boyuan Liang, Masayoshi Tomizuka, Jianshu Zhou</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2609.22871">Paper <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="multicamera" class="publication">
+              <p class="publication-venue">2026<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2604.00557">Multi-Camera View Scaling for Data-Efficient Robot Imitation Learning</a></h4>
+                <p class="authors">Yichen Xie, <strong>Yixiao Wang</strong>, Shuqi Zhao, Cheng-En Wu, Masayoshi Tomizuka, Jianwen Xie, Hao-Shu Fang</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2604.00557">Paper <span aria-hidden="true">↗</span></a><a href="https://yichen928.github.io/robot_multiview/">Project <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="generalization" class="publication">
+              <p class="publication-venue">2025<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2504.18538">Generalization Capability for Imitation Learning</a></h4>
+                <p class="authors"><strong>Yixiao Wang</strong></p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2504.18538">Paper <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="imagined-potential-games" class="publication">
+              <p class="publication-venue">2024<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2411.03669">Imagined Potential Games: A Framework for Simulating, Learning and Evaluating Interactive Behaviors</a></h4>
+                <p class="authors">Lingfeng Sun, <strong>Yixiao Wang</strong>, Pin-Yun Hung, Changhao Wang, Xiang Zhang, Zhuo Xu, Masayoshi Tomizuka</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2411.03669">Paper <span aria-hidden="true">↗</span></a><a href="https://sites.google.com/view/simulate-learn-interact">Project <span aria-hidden="true">↗</span></a><a href="images/ipg_2.mp4">Demo <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
+            <article id="composition-vl" class="publication">
+              <p class="publication-venue">2024<span>Preprint</span></p>
               <div>
                 <h4><a href="https://arxiv.org/abs/2406.18591">Composition Vision-Language Understanding via Segment and Depth Anything Model</a></h4>
                 <p class="authors">Mingxiao Huo, Pengliang Ji, Haotian Lin, Junchen Liu, <strong>Yixiao Wang</strong>, Yijun Chen</p>
@@ -209,6 +296,48 @@
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="background" class="section" aria-labelledby="background-heading">
+        <p class="eyebrow"><span class="section-number">03</span> Beyond the papers</p>
+        <h2 id="background-heading">Background &amp; service</h2>
+        <div class="background-grid">
+          <div>
+            <h3 class="subsection-title">Industry research</h3>
+            <article class="background-entry">
+              <h4>Amazon</h4>
+              <p class="background-meta">Applied Scientist Intern · May–Aug 2026</p>
+              <p>Pretrained reusable action priors through large-scale reinforcement learning for data-efficient vision-language-action models in dexterous manipulation.</p>
+            </article>
+            <article class="background-entry">
+              <h4>NVIDIA</h4>
+              <p class="background-meta">Isaac Loco-Manipulation Intern · May–Dec 2025</p>
+              <p>Studied how data composition, scaling, training dynamics, and contrastive learning shape representations for transfer across human and robot embodiments.</p>
+            </article>
+          </div>
+          <div>
+            <h3 class="subsection-title">Education</h3>
+            <article class="background-entry">
+              <h4>University of California, Berkeley</h4>
+              <p>PhD in Mechanical Engineering</p>
+              <p class="background-meta">Sep 2022–May 2027 (expected) · Advisor: Masayoshi Tomizuka</p>
+            </article>
+            <article class="background-entry">
+              <h4>Northwestern University</h4>
+              <p>MS in Mechanical Engineering</p>
+              <p class="background-meta">Sep 2019–Jun 2021</p>
+            </article>
+            <article class="background-entry">
+              <h4>Shanghai Jiao Tong University</h4>
+              <p>BS, 2018; MS, 2021 · Mechanical Engineering</p>
+            </article>
+          </div>
+        </div>
+        <div class="service">
+          <h3 class="subsection-title">Professional service</h3>
+          <p>I review for ICML, ICLR, ICRA, and IROS, and for IEEE Transactions on Robotics (T-RO), IEEE Robotics and Automation Letters (RA-L), and Transactions on Machine Learning Research (TMLR).</p>
+          <p><strong class="award">ICML Gold Reviewer · 2026</strong></p>
         </div>
       </section>
 

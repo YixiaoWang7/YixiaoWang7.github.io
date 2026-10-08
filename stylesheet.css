@@ -105,12 +105,19 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
 .news-list li { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 26px; padding-block: 9px; }
 .news-list time { color: var(--muted); font-size: 12px; padding-top: 2px; font-variant-numeric: tabular-nums; }
 .news-list p { font-size: 14px; }
-.news-tag { color: var(--accent); font-size: 11px; font-weight: 600; margin-right: 5px; }
 .news-list .award { font-size: inherit; }
 .news-list a { text-decoration-color: #a4afa2; }
 .older-news { margin: 8px 0 0 126px; }
 .older-news summary { width: fit-content; color: var(--accent); font-size: 12px; cursor: pointer; padding-block: 6px; }
 .older-news .news-list { margin: 10px 0 0 -126px; }
+
+.background-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 54px; margin-top: 32px; }
+.background-entry { margin-top: 22px; }
+.background-entry h4 { font-size: 14px; font-weight: 600; }
+.background-entry p, .service p { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.background-entry .background-meta { font-size: 11px; }
+.service { margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--line); }
+.service p { max-width: 820px; margin-top: 12px; }
 
 .contact { display: flex; align-items: center; justify-content: space-between; gap: 45px; }
 .contact h2 { font-size: 27px; }
@@ -165,7 +172,7 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
   .authors { font-size: 12px; }
   .more-publications { margin-top: 32px; }
   .publication { grid-template-columns: 1fr; gap: 8px; padding-block: 22px; }
-  .publication-venue { display: flex; align-items: baseline; gap: 12px; }
+  .publication-venue { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
   .publication-venue span { margin: 0; }
   .publication h4 { font-size: 15px; }
   .news { padding-block: 26px 30px; }
@@ -174,6 +181,7 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
   .news-list p { font-size: 13px; }
   .older-news { margin-left: 89px; }
   .older-news .news-list { margin-left: -89px; }
+  .background-grid { grid-template-columns: 1fr; gap: 32px; margin-top: 28px; }
   .contact h2 { font-size: 27px; }
   .contact-link { white-space: normal; overflow-wrap: anywhere; }
   .site-footer { font-size: 10px; gap: 16px; }
