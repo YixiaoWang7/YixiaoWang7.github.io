@@ -83,6 +83,7 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
 .paper h3 a:hover, .publication h4 a:hover { color: var(--accent); text-decoration: underline; }
 .authors { color: var(--muted); font-size: 12px; line-height: 1.7; margin-top: 10px; }
 .authors strong { color: var(--ink); }
+.paper-summary { color: var(--muted); font-size: 13px; line-height: 1.7; margin-top: 12px; }
 .paper-links { display: flex; flex-wrap: wrap; gap: 6px 22px; margin-top: 12px; }
 .paper-links a { font-size: 11px; font-weight: 500; text-decoration: none; padding-block: 3px; }
 .paper-links a:hover { text-decoration: underline; }
