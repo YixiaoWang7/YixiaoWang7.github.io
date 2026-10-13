@@ -106,9 +106,18 @@
         <p class="section-intro">Three threads connecting fundamental questions to learning in the physical world.</p>
 
         <article id="compositional-generalization" class="paper featured-paper">
-          <a class="paper-figure" href="https://yixiaowang7.github.io/Diagnosing_Compositional_Generalization_Robot_Page/" aria-label="Explore Diagnosing Compositional Generalization in Sequential Robot Tasks">
-            <img src="images/compositional_generalization.png" width="1500" height="619" alt="Sequential pick-and-place task in which a later instruction constrains an earlier placement" loading="lazy">
-          </a>
+          <div class="paper-figure task-cube" id="task-cube">
+            <div class="task-cube-bar" hidden>
+              <div class="task-cube-sets" role="group" aria-label="Training set"><span>Train on</span><button type="button" data-set="diag" aria-pressed="false">4</button><button type="button" data-set="orth" aria-pressed="true">16</button><button type="button" data-set="full" aria-pressed="false">64</button></div>
+              <p class="task-cube-readout" aria-live="polite"></p>
+            </div>
+            <div class="task-cube-view" hidden>
+              <canvas tabindex="0" role="img" aria-label="Rotatable cube of the 64 pick, place, and press tasks, colored by per-task success. Drag or use arrow keys to rotate; hover or tap a block for its task."></canvas>
+              <div class="task-cube-tip"></div>
+            </div>
+            <img class="task-cube-fallback" src="images/compositional_generalization_cube.png" width="508" height="422" alt="Cube of the 64 pick, place, and press tasks: training on 16 orthogonal tasks reaches 78.2% success on the 48 held-out tasks" loading="lazy">
+            <p class="task-cube-legend" hidden><span class="swatch trained"></span>trained <span class="swatch held"></span>held out · darker = higher success</p>
+          </div>
           <div class="paper-copy">
             <div class="paper-meta"><span class="paper-topic">Generalization</span><span>CoRL · 2026 · <strong class="award">Spotlight</strong></span></div>
             <h3><a href="https://arxiv.org/abs/2607.29687">Diagnosing Compositional Generalization in Sequential Robot Tasks</a></h3>
@@ -357,5 +366,6 @@
       <span>Yixiao Wang · UC Berkeley</span>
       <div><a href="https://github.com/YixiaoWang7/YixiaoWang7.github.io">Source</a><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
+    <script defer src="js/task-cube.js"></script>
   </body>
 </html>

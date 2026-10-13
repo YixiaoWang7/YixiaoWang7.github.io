@@ -198,3 +198,32 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
   .paper, .publication, .news-list li { break-inside: avoid; }
   a { color: inherit; }
 }
+
+/* Interactive task cube (js/task-cube.js). Cube and tooltip styling follow the project page's
+   viewer (results.css); the static image shows until the viewer starts. */
+.task-cube { position: relative; flex-direction: column; align-items: stretch; gap: 6px; height: 290px; padding: 10px 12px; }
+.task-cube:hover { border-color: var(--line); }
+.task-cube [hidden], .task-cube.is-interactive .task-cube-fallback { display: none; }
+.task-cube-bar { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.task-cube-sets { display: flex; align-items: center; gap: 3px; color: var(--muted); font-size: 10px; }
+.task-cube-sets span { margin-right: 4px; white-space: nowrap; }
+.task-cube-sets button { min-width: 30px; padding: 3px 7px; border: 1px solid var(--line); border-radius: 3px; background: white; color: var(--muted); font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; }
+.task-cube-sets button:hover { border-color: #3f6b91; color: #3f6b91; }
+.task-cube-sets button[aria-pressed="true"] { border-color: rgba(74, 115, 150, .4); background: rgba(74, 115, 150, .1); color: #3f6b91; }
+.task-cube-sets button:focus-visible, .task-cube canvas:focus-visible { outline: 2px solid #3f6b91; outline-offset: 2px; }
+.task-cube-readout { color: var(--muted); font-size: 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.task-cube-readout strong { color: var(--ink); font-size: 12px; }
+.task-cube-view { position: relative; flex: 1; min-height: 0; border-radius: 3px; overflow: hidden; background: #eef1f6; }
+.task-cube-view canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+.task-cube-view canvas:active { cursor: grabbing; }
+.task-cube-fallback { flex: 1; min-height: 0; }
+.task-cube-legend { color: var(--muted); font-size: 9.5px; text-align: center; }
+.task-cube-legend .swatch { display: inline-block; width: 8px; height: 8px; margin: 0 4px 0 6px; border-radius: 1px; vertical-align: -0.5px; }
+.task-cube-legend .swatch:first-child { margin-left: 0; }
+.task-cube-tip { position: absolute; z-index: 1; display: none; max-width: 230px; padding: 7px 10px; border: 1px solid rgba(74, 115, 150, .25); border-radius: 8px; background: rgba(255, 255, 255, .96); box-shadow: 0 4px 16px rgba(0, 0, 0, .1); color: #1f2733; font-size: 11px; line-height: 1.5; pointer-events: none; }
+.task-cube-tip .tt-task { color: #3f6b91; font-size: 11.5px; font-weight: 700; }
+.task-cube-tip .tt-label { opacity: .55; margin-right: 4px; }
+.task-cube-tip .tt-id { font-weight: 600; }
+.task-cube-tip .tt-bar { height: 5px; border-radius: 3px; margin-top: 4px; }
+@media (max-width: 900px) { .task-cube { height: 270px; } }
+@media (max-width: 640px) { .task-cube { height: 340px; padding: 12px 14px; } }

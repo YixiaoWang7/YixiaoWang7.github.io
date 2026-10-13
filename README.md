@@ -16,11 +16,12 @@ Open <http://localhost:8000>. You can also open `index.html` directly.
 
 - `index.html`: introduction, recent updates, research perspective, selected work, additional publications, background and service, and contact.
 - `stylesheet.css`: responsive layout, typography, keyboard focus, and print styles. No motion effects or autoplay.
-- `images/`: portrait and research media. `structure_ver.png` is the browser-compatible rendering of the existing PDF figure; `compositional_generalization.png` is an existing figure from the compositional-generalization project page.
+- `images/`: portrait and research media. `structure_ver.png` is the browser-compatible rendering of the existing PDF figure; `compositional_generalization_cube.png` is the default view of the task cube, shown when JavaScript is off.
+- `js/task-cube.js`: the rotatable 4 × 4 × 4 task cube on the compositional-generalization card. Its rendering (colours, translucency, edges, labels, camera) is copied from the project page's viewer, with a tighter camera fit and larger labels for the card. It switches between three training sets (4 diagonal, 16 orthogonal, all 64 tasks) using three-seed means and SDs copied from the project page's `results/data.json`. `js/vendor/three-r128.min.js` (MIT, same copy as the project page) is loaded only when the card nears the viewport.
 - `data/YixiaoWang_CV.pdf`: the current downloadable résumé, copied unchanged from `2026_resume-3.pdf` on October 10, 2026. The existing URL is retained.
 - `mipnerf/`, `mipnerf360/`, and `zipnerf/`: inherited project pages, preserved at their existing URLs.
 
-Content is plain HTML and works without JavaScript. Add papers directly to the appropriate publication section, retaining full author lists and descriptive image alt text. Keep three recent news entries visible, with the rest inside the native “Earlier updates” `details` disclosure. Demo links open the original videos on demand.
+Content is plain HTML and works without JavaScript; the task cube is the only script and falls back to a static image of its default view. Add papers directly to the appropriate publication section, retaining full author lists and descriptive image alt text. Keep three recent news entries visible, with the rest inside the native “Earlier updates” `details` disclosure. Demo links open the original videos on demand.
 
 ## Design direction
 
