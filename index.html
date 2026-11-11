@@ -104,7 +104,30 @@
           </div>
           <a class="text-link" href="https://scholar.google.com/citations?hl=en&amp;user=nUIFbw8AAAAJ">Google Scholar <span aria-hidden="true">↗</span></a>
         </div>
-        <p class="section-intro">Three threads connecting fundamental questions to learning in the physical world.</p>
+        <p class="section-intro">Four threads connecting fundamental questions to learning in the physical world.</p>
+
+        <article id="latent-rl-prior" class="paper featured-paper">
+          <div class="paper-figure task-videos" id="task-videos">
+            <div class="task-videos-bar" hidden>
+              <div class="task-videos-tasks" role="group" aria-label="Downstream task"><button type="button" data-task="door" aria-pressed="true">Door</button><button type="button" data-task="assembly" aria-pressed="false">Assembly</button><button type="button" data-task="pose" aria-pressed="false">Pose</button></div>
+              <p class="task-videos-readout" aria-live="polite"><strong>10×</strong> fewer demos</p>
+            </div>
+            <div class="task-videos-view">
+              <video controls playsinline muted loop preload="none" poster="images/latent-rl-prior/door.webp" width="720" height="720" data-task="door" aria-label="Door lifting: a dexterous robot hand lifts a door to reveal a cube behind it">
+                <source src="images/latent-rl-prior/door.mp4" type="video/mp4">
+              </video>
+              <button type="button" class="task-videos-play" aria-label="Play door lifting video" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
+            </div>
+            <p class="task-videos-legend">Demonstration replays in simulation</p>
+          </div>
+          <div class="paper-copy">
+            <div class="paper-meta"><span class="paper-topic">Data efficiency</span><span>Preprint · 2026</span></div>
+            <h3><a href="https://arxiv.org/abs/2611.08458">Latent RL Priors for Data-Efficient Dexterous Manipulation</a></h3>
+            <p class="authors"><strong>Yixiao Wang</strong>, Peiyi Chen, Mustafa Mukadam, Shreekant Gayaka, Masayoshi Tomizuka, Son Tran</p>
+            <p class="paper-summary">Distills large-scale RL rollouts into a flow-matching action decoder, then freezes it and adapts to vision with action supervision alone. Outperforms full fine-tuning of π<sub>0.5</sub> and GR00T N1.7 in the low-data regime, and surpasses full-data baselines with 10× fewer demonstrations on door lifting and 5× fewer on bimanual assembly.</p>
+            <div class="paper-links"><a href="https://arxiv.org/abs/2611.08458">Paper <span aria-hidden="true">↗</span></a><a href="https://yixiaowang7.github.io/latent-rl-prior-page/">Project <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
 
         <article id="compositional-generalization" class="paper featured-paper">
           <div class="paper-figure task-cube" id="task-cube">
@@ -260,6 +283,14 @@
         <div class="more-publications">
           <h3 class="subsection-title">Preprints</h3>
           <div class="publication-list">
+            <article id="pihand" class="publication">
+              <p class="publication-venue">2026<span>Preprint</span></p>
+              <div>
+                <h4><a href="https://arxiv.org/abs/2610.31299">PiHand: Latent Hand-Object Interaction Priors for Physics-Based Policy Learning</a></h4>
+                <p class="authors">Niklas Berndt, Xianghui Xie, Enes Duran, <strong>Yixiao Wang</strong>, Gerard Pons-Moll</p>
+                <div class="paper-links"><a href="https://arxiv.org/abs/2610.31299">Paper <span aria-hidden="true">↗</span></a><a href="https://virtualhumans.mpi-inf.mpg.de/PiHand/">Project <span aria-hidden="true">↗</span></a></div>
+              </div>
+            </article>
             <article id="astrobee" class="publication">
               <p class="publication-venue">2026<span>Preprint</span></p>
               <div>
@@ -368,5 +399,6 @@
       <div><a href="https://github.com/YixiaoWang7/YixiaoWang7.github.io">Source</a><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
     <script defer src="js/task-cube.js"></script>
+    <script defer src="js/task-videos.js"></script>
   </body>
 </html>
