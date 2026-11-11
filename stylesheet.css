@@ -211,8 +211,8 @@ h2 { margin-top: 13px; font-family: var(--serif); font-weight: 400; font-size: 3
 .task-cube-sets button:hover, .task-videos-tasks button:hover { border-color: #3f6b91; color: #3f6b91; }
 .task-cube-sets button[aria-pressed="true"], .task-videos-tasks button[aria-pressed="true"] { border-color: rgba(74, 115, 150, .4); background: rgba(74, 115, 150, .1); color: #3f6b91; }
 .task-cube-sets button:focus-visible, .task-cube canvas:focus-visible, .task-videos-tasks button:focus-visible, .task-videos video:focus-visible { outline: 2px solid #3f6b91; outline-offset: 2px; }
-.task-cube-readout, .task-videos-readout { color: var(--muted); font-size: 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.task-cube-readout strong, .task-videos-readout strong { color: var(--ink); font-size: 12px; }
+.task-cube-readout { color: var(--muted); font-size: 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.task-cube-readout strong { color: var(--ink); font-size: 12px; }
 .task-cube-view { position: relative; flex: 1; min-height: 0; border-radius: 3px; overflow: hidden; background: #eef1f6; }
 .task-cube-view canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
 .task-cube-view canvas:active { cursor: grabbing; }
